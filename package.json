@@ -1,0 +1,78 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "Joaopedrodcf web developer doing some react and node",
+    "license": "MIT",
+    "homepage": "",
+    "author": {
+        "name": "João Ferreira",
+        "email": "joaoferr93@gmail.com",
+        "url": "https://twitter.com/Joaopedrodcf"
+    },
+    "main": "src/index.js",
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build --stats && webpack-bundle-analyzer build/bundle-stats.json -m static -r build/bundle-stats.html -O",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "dependencies": {
+        "history": "^4.9.0",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-feather": "^1.1.6",
+        "react-ga": "^2.5.7",
+        "react-helmet": "^5.2.1",
+        "react-lazy-load": "^3.0.13",
+        "react-router": "^5.0.0",
+        "react-router-dom": "^5.0.0",
+        "react-scripts": "2.1.8",
+        "react-sidebar": "^3.0.2",
+        "react-switch": "^5.0.0",
+        "styled-components": "^4.2.0"
+    },
+    "devDependencies": {
+        "babel-eslint": "10.0.1",
+        "eslint": "5.16.0",
+        "eslint-config-airbnb": "17.1.0",
+        "eslint-config-joaopedrodcf": "1.2.0",
+        "eslint-config-prettier": "4.3.0",
+        "eslint-plugin-better-styled-components": "^1.1.1",
+        "eslint-plugin-import": "2.17.3",
+        "eslint-plugin-jest": "22.6.4",
+        "eslint-plugin-jquery": "1.5.0",
+        "eslint-plugin-jsx-a11y": "6.2.1",
+        "eslint-plugin-markdown": "1.0.0",
+        "eslint-plugin-prettier": "3.1.0",
+        "eslint-plugin-react": "7.13.0",
+        "husky": "^2.3.0",
+        "lint-staged": "^8.1.7",
+        "prettier": "1.17.1",
+        "prettier-config-joaopedrodcf": "1.0.5",
+        "stylelint": "^10.0.1",
+        "stylelint-order": "^3.0.0",
+        "stylelint-config-rational-order": "^0.1.2",
+        "stylelint-config-recommended": "^2.2.0",
+        "stylelint-config-styled-components": "^0.1.1",
+        "stylelint-processor-styled-components": "^1.7.0",
+        "webpack-bundle-analyzer": "^3.3.2"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ],
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint --fix",
+            "stylelint './src/**/*.js'",
+            "git add"
+        ]
+    }
+}
