@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const black = '#000000';
 const white = '#ffffff';
-const primary = '#1565c0';
+const primary = '#1a237e';
 
 export const color = {
     black,

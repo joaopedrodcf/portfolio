@@ -5,10 +5,10 @@ import styles from '../../styles';
 export const SCSidebar = styled.div`
     width: 256px;
     height: 100%;
+    padding-top: 56px;
     background-color: ${styles.color.white};
 
     * {
-        color: ${styles.color.white};
         font-weight: 500;
         font-size: 18px;
         text-align: start;
@@ -27,33 +27,7 @@ export const SCNavLink = styled(NavLink).attrs({
     align-items: center;
     justify-content: flex-start;
     padding: 12px;
-    text-decoration: none;
-    background-color: ${props =>
-        props.selected ? '#bdbdbd' : styles.color.white};
-    transition: all 250ms ease-in-out;
-    will-change: transform;
-
-    svg {
-        margin-right: 12px;
-        fill: ${props => (props.selected ? 'black' : '')};
-    }
-
-    &:hover {
-        background-color: ${props =>
-            props.version ? '#bdbdbd' : styles.color.primary};
-    }
-
-    &.active {
-        background-color: ${props =>
-            props.version ? '#bdbdbd' : styles.color.primary};
-    }
-`;
-
-export const SCLink = styled.a`
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 12px;
+    color: ${styles.color.black};
     text-decoration: none;
     background-color: ${styles.color.white};
     transition: all 250ms ease-in-out;
@@ -64,11 +38,43 @@ export const SCLink = styled.a`
     }
 
     &:hover {
-        background-color: #fdd835;
+        color: ${styles.color.white};
+        background-color: ${styles.color.primary};
     }
 
     &.active {
-        background-color: #fdd835;
+        color: ${styles.color.white};
+        background-color: ${styles.color.primary};
+    }
+
+    &.active > svg {
+        color: ${styles.color.white};
+    }
+`;
+
+export const SCLink = styled.a`
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px;
+    color: ${styles.color.black};
+    text-decoration: none;
+    background-color: ${styles.color.white};
+    transition: all 250ms ease-in-out;
+    will-change: transform;
+
+    svg {
+        margin-right: 12px;
+    }
+
+    &:hover {
+        color: ${styles.color.white};
+        background-color: ${styles.color.primary};
+    }
+
+    &.active {
+        color: ${styles.color.white};
+        background-color: ${styles.color.primary};
     }
 `;
 
@@ -81,6 +87,7 @@ export const Sections = styled.div`
 
 export const SectionsHeader = styled.div`
     padding: 6px 12px 12px 12px;
+    color: ${styles.color.black};
     font-weight: 600;
     font-size: 14px;
     text-transform: uppercase;
