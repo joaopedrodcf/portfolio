@@ -7,33 +7,39 @@ const Image = ({
     size,
     isThumbnail,
     isToLazyLoad,
-    width
-}) => {
-    const ImageComponent = (
-        <SCImage
-            src={imageUrl}
-            alt={altText}
-            size={size}
-            isThumbnail={isThumbnail}
-            width={width}
-        />
-    );
-
-    if (isToLazyLoad) {
-        return (
+    width,
+    height
+}) => (
+    <>
+        {isToLazyLoad ? (
             <SCLazyLoad
                 size={size}
                 offset={500}
                 throttle={250}
                 debounce={false}
                 width={width}
+                height={height}
             >
-                {ImageComponent}
+                <SCImage
+                    src={imageUrl}
+                    alt={altText}
+                    size={size}
+                    isThumbnail={isThumbnail}
+                    width={width}
+                    height={height}
+                />
             </SCLazyLoad>
-        );
-    }
+        ) : (
+            <SCImage
+                src={imageUrl}
+                alt={altText}
+                size={size}
+                isThumbnail={isThumbnail}
+                width={width}
+                height={height}
+            />
+        )}
+    </>
+);
 
-    return { ImageComponent };
-};
-
-export default Image;
+export default React.memo(Image);
