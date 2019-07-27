@@ -1,9 +1,22 @@
 import React from 'react';
 
 import { Helmet } from 'react-helmet';
+import { gql } from 'apollo-boost';
+import { Query } from 'react-apollo';
 import { Column, SCLink, Text } from './style';
 import Global from '../../styles';
 import Image from '../../components/shared/image';
+
+const PROJECTS = gql`
+    {
+        projects {
+            id
+            title
+            description
+            image
+        }
+    }
+`;
 
 const Projects = () => {
     return (
@@ -15,22 +28,30 @@ const Projects = () => {
                 </title>
             </Helmet>
             <Column>
-                <SCLink href="https://yokaidex.com">
-                    <Image
-                        imageUrl="https://res.cloudinary.com/dcrcweea8/image/upload/v1562620408/portfolio/yokaidex.png"
-                        altText="yokaidex"
-                        size="large"
-                    />
-                </SCLink>
-                <Text>
-                    <h1>Yokaidex</h1>
-                    <p>
-                        PWA for the Yo-kai Watch games, it contains all yo-kais
-                        for Yo-kai Watch, their locations, stats, favorite
-                        foods, skills and evolutions.
-                    </p>
-                    <p>With a really good user base of 4k this year!</p>
-                </Text>
+                <Query query={PROJECTS}>
+                    {({ loading, error, data }) => {
+                        if (loading) return <p>Loading...</p>;
+                        if (error) return <p>Error :(</p>;
+
+                        return data.projects.map(
+                            ({ title, description, image }) => (
+                                <>
+                                    <SCLink href="https://yokaidex.com">
+                                        <Image
+                                            imageUrl={image}
+                                            altText={title}
+                                            size="large"
+                                        />
+                                    </SCLink>
+                                    <Text>
+                                        <h1>{title}</h1>
+                                        <p>{description}</p>
+                                    </Text>
+                                </>
+                            )
+                        );
+                    }}
+                </Query>
             </Column>
         </Global.Container>
     );
