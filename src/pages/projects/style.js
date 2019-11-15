@@ -1,6 +1,5 @@
 /* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
-
 import styles from '../../styles';
 
 export const Column = styled.div`
@@ -17,7 +16,7 @@ export const SCLink = styled.a`
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 12px;
+    padding: 6px;
     color: ${props => props.theme.color};
     text-decoration: none;
 
@@ -27,12 +26,7 @@ export const SCLink = styled.a`
 
     &:hover {
         color: ${styles.color.black};
-        background-color: #fdd835;
-    }
-
-    &.active {
-        color: ${styles.color.black};
-        background-color: #fdd835;
+        background-color: ${styles.color.black};
     }
 `;
 

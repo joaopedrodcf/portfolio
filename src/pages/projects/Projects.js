@@ -53,6 +53,22 @@ const Projects = () => {
                     }}
                 </Query>
             </Column>
+            <Column>
+                <SCLink href="https://blog-mern-demo.herokuapp.com/">
+                    <Image
+                        imageUrl="https://res.cloudinary.com/dcrcweea8/image/upload/v1562620408/portfolio/blog-mern.png"
+                        altText="blog-mern"
+                        size="large"
+                    />
+                </SCLink>
+                <Text>
+                    <h1>Blog-mern</h1>
+                    <p>
+                        A blog create where you can create an account to create
+                        content and comment other&rsquo;s content.
+                    </p>
+                </Text>
+            </Column>
         </Global.Container>
     );
 };

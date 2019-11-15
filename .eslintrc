@@ -1,17 +1,5 @@
 {
     "extends": [
-        "joaopedrodcf",
-        "plugin:react-perf/all"
+        "joaopedrodcf"
     ],
-    "plugins": [
-        "react-perf"
-    ],
-    "rules": {
-        "react/prop-types": [
-            0
-        ],
-        "react/no-array-index-key": [
-            0
-        ]
-    }
 }

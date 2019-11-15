@@ -3,11 +3,13 @@ import styled from 'styled-components';
 const black = '#000000';
 const white = '#ffffff';
 const primary = '#1a237e';
+const secondary = '#9fa8da';
 
 export const color = {
     black,
     white,
-    primary
+    primary,
+    secondary
 };
 
 const Container = styled.div`
