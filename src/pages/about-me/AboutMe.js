@@ -23,17 +23,17 @@ const AboutUs = () => (
             />
             <Text>
                 <p>
-                    Passionate about open source software and always eager to
+                    Passionate about open-source software and always eager to
                     learn new things.
                 </p>
                 <p>
-                    Since two years ago started a journey of self learning and
+                    Since two years ago started a journey of self-learning and
                     been improving the knowledge of my favorite language,
                     JavaScript!
                 </p>
                 <p>
-                    My favorite stack for developing is React and Node js! Also
-                    I&apos;m trying to learn Typescript at time, it&apos;s
+                    My favorite stack for developing is React and Node js! Also,
+                    I&apos;m trying to learn Typescript at the time, it&apos;s
                     really useful for productivity.
                 </p>
                 <p>
@@ -43,9 +43,9 @@ const AboutUs = () => (
                 </p>
                 <p>
                     I also been working at Farfetch as a Frontend Developer
-                    working on the Aquisition and Engament Cluster, doing AB
+                    working on the Aquisition and Engagement Cluster, doing AB
                     Testing in the site, providing possible better UX and UI
-                    experiencies for our users.
+                    experience for our users.
                 </p>
             </Text>
         </Column>
