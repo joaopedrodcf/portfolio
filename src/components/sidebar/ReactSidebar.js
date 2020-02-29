@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactSidebar from 'react-sidebar';
 import SCSidebar from './Sidebar';
-import { withSidebarContext } from '../../store';
+import { SidebarContext } from '../../store/sidebar';
+import React, { useContext } from 'react';
+import ReactSidebar from 'react-sidebar';
 
 const styles = {
     sidebar: { background: 'white', position: 'fixed' },
@@ -15,8 +15,8 @@ const styles = {
 
 const sidebar = <SCSidebar />;
 
-const Sidebar = ({ context, children }) => {
-    const { isSidebarOpen, handleSidebar } = context;
+const Sidebar = ({ children }) => {
+    const { isSidebarOpen, handleSidebar } = useContext(SidebarContext);
 
     return (
         <ReactSidebar
@@ -30,4 +30,4 @@ const Sidebar = ({ context, children }) => {
     );
 };
 
-export default withSidebarContext(Sidebar);
+export default Sidebar;

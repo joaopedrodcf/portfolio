@@ -1,6 +1,12 @@
 /* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
 
+export const Header = styled.div`
+    display: flex;
+    justify-content: center;
+    margin: 32px 0 12px;
+`;
+
 export const Row = styled.div`
     display: flex;
     flex-direction: row;

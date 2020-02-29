@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 const AboutMe = lazy(() => import('./pages/about-me'));
 const Projects = lazy(() => import('./pages/projects'));
+const ContactMe = lazy(() => import('./pages/contact-me'));
 
 const Routes = () => {
     return (
@@ -10,6 +11,7 @@ const Routes = () => {
             <Switch>
                 <Route exact path="/" component={AboutMe} />
                 <Route exact path="/projects" component={Projects} />
+                <Route exact path="/contact-me" component={ContactMe} />
             </Switch>
         </Suspense>
     );

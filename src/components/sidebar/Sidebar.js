@@ -1,8 +1,3 @@
-import React from 'react';
-
-import Twitter from 'react-feather/dist/icons/twitter';
-import Book from 'react-feather/dist/icons/book';
-import Mail from 'react-feather/dist/icons/mail';
 import {
     Container,
     SCSidebar,
@@ -11,6 +6,10 @@ import {
     SectionsHeader,
     SCLink
 } from './style';
+import React from 'react';
+import Twitter from 'react-feather/dist/icons/twitter';
+import Book from 'react-feather/dist/icons/book';
+import Mail from 'react-feather/dist/icons/mail';
 
 const Sidebar = () => {
     return (

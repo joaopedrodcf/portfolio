@@ -1,5 +1,4 @@
 /* eslint-disable import/prefer-default-export */
-import styles from '../../styles';
 import styled from 'styled-components';
 
 export const Header = styled.div`
@@ -8,9 +7,9 @@ export const Header = styled.div`
     margin: 32px 0 12px;
 `;
 
-export const Column = styled.div`
+export const Row = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-bottom: 12px;
@@ -18,26 +17,23 @@ export const Column = styled.div`
     text-align: justify;
 `;
 
-export const SCLink = styled.a`
+export const Column = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 6px;
-    color: ${props => props.theme.color};
-    text-decoration: none;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 12px;
+    font-size: 18px;
+    text-align: justify;
 
-    svg {
-        margin-right: 12px;
-    }
-
-    &:hover {
-        color: ${styles.color.black};
-        background-color: ${styles.color.black};
+    form {
+        width: 100%;
     }
 `;
 
 export const Text = styled.div`
-    h2 {
+    h1 {
         margin-bottom: 24px;
         text-align: center;
     }

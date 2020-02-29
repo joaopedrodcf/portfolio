@@ -1,4 +1,1 @@
-import ContextProvider from './store';
-import { withSidebarContext } from './sidebar';
-
-export { ContextProvider, withSidebarContext };
+export { default } from './store';

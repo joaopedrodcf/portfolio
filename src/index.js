@@ -1,24 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
 import * as serviceWorker from './serviceWorker';
 import App from './App';
-import { ContextProvider } from './store';
+import ContextProvider from './store';
 import ScrollToTop from './components/shared/scroll-to-top';
-
-const client = new ApolloClient({
-    uri: 'http://localhost:4000/graphql'
-});
+import { BrowserRouter } from 'react-router-dom';
+import ReactDOM from 'react-dom';
+import React from 'react';
 
 ReactDOM.render(
     <BrowserRouter>
         <ScrollToTop>
             <ContextProvider>
-                <ApolloProvider client={client}>
-                    <App />
-                </ApolloProvider>
+                <App />
             </ContextProvider>
         </ScrollToTop>
     </BrowserRouter>,

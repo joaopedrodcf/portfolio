@@ -1,57 +1,36 @@
-import React from 'react';
-
-import { Helmet } from 'react-helmet';
-import { gql } from 'apollo-boost';
-import { Query } from 'react-apollo';
-import { Column, SCLink, Text } from './style';
+import { Column, SCLink, Text, Header } from './style';
 import Global from '../../styles';
 import Image from '../../components/shared/image';
-
-const PROJECTS = gql`
-    {
-        projects {
-            id
-            title
-            description
-            image
-        }
-    }
-`;
+import { Helmet } from 'react-helmet';
+import React from 'react';
 
 const Projects = () => {
     return (
         <Global.Container>
             <Helmet>
                 <title>
-                    About me | Joaopedrodcf web developer doing some react and
+                    Projects | Joaopedrodcf web developer doing some react and
                     node
                 </title>
             </Helmet>
+            <Header>
+                <h1>Projects</h1>
+            </Header>
             <Column>
-                <Query query={PROJECTS}>
-                    {({ loading, error, data }) => {
-                        if (loading) return <p>Loading...</p>;
-                        if (error) return <p>Error :(</p>;
-
-                        return data.projects.map(
-                            ({ title, description, image }) => (
-                                <>
-                                    <SCLink href="https://yokaidex.com">
-                                        <Image
-                                            imageUrl={image}
-                                            altText={title}
-                                            size="large"
-                                        />
-                                    </SCLink>
-                                    <Text>
-                                        <h1>{title}</h1>
-                                        <p>{description}</p>
-                                    </Text>
-                                </>
-                            )
-                        );
-                    }}
-                </Query>
+                <SCLink href="https://yokaidex.netlify.com/">
+                    <Image
+                        imageUrl="https://res.cloudinary.com/dcrcweea8/image/upload/v1562620408/portfolio/yokaidex.png"
+                        altText="yokaidex"
+                        size="large"
+                    />
+                </SCLink>
+                <Text>
+                    <h2>Yokaidex</h2>
+                    <p>
+                        A Wiki page where you can find all the information from
+                        Yo-kai Watch games!
+                    </p>
+                </Text>
             </Column>
             <Column>
                 <SCLink href="https://blog-mern-demo.herokuapp.com/">
@@ -62,7 +41,7 @@ const Projects = () => {
                     />
                 </SCLink>
                 <Text>
-                    <h1>Blog-mern</h1>
+                    <h2>Blog-mern</h2>
                     <p>
                         A blog create where you can create an account to create
                         content and comment other&rsquo;s content.

@@ -1,5 +1,5 @@
-import React from 'react';
 import { SCImage, SCLazyLoad } from './style';
+import React from 'react';
 
 const Image = ({
     imageUrl,

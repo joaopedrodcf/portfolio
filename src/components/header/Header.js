@@ -1,14 +1,15 @@
 /* eslint-disable react/destructuring-assignment */
-import React from 'react';
-import Menu from 'react-feather/dist/icons/menu';
 import Container from './style';
+import { SidebarContext } from '../../store/sidebar';
+import React, { useContext } from 'react';
+import Menu from 'react-feather/dist/icons/menu';
 
-import { withSidebarContext } from '../../store';
+const Header = () => {
+    const { handleSidebar } = useContext(SidebarContext);
 
-function Header({ context }) {
     return (
         <Container>
-            <div role="presentation" onClick={context.handleSidebar}>
+            <div role="presentation" onClick={handleSidebar}>
                 <Menu />
             </div>
             <div>
@@ -16,6 +17,6 @@ function Header({ context }) {
             </div>
         </Container>
     );
-}
+};
 
-export default withSidebarContext(Header);
+export default Header;
