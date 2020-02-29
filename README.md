@@ -1,12 +1,12 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5bc77de0-4f9f-458c-88d0-51adfbb64fa5/deploy-status)](https://app.netlify.com/sites/joaopedrodcf/deploys)
+
 # Portfolio
 
-## Logo
+💻 A portfolio PWA made with react and styled components
 
-https://www.launchaco.com/logo/editor
+## Website
 
-## Favicon
-
-https://www.favicon-generator.org/
+The website is hosted on GitHub pages 👉 [portfolio page](https://joaopedrodcf.netlify.com)
 
 ## License
 
