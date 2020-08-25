@@ -1,2 +1,3 @@
-#ignore files
-/src/serviceWorker.js
+/node_modules
+/build
+/public

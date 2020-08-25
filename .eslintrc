@@ -1,5 +1,43 @@
 {
+    "settings": {
+        "react": {
+          "version": "detect"
+        }
+    },
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "jest": true,
+        "node": true
+    },
     "extends": [
-        "joaopedrodcf"
+        "eslint:recommended", 
+        "plugin:react/recommended" , 
+        "plugin:prettier/recommended", 
+        "prettier/react",
+        "plugin:jsx-a11y/recommended",
+        "plugin:testing-library/recommended",
+        "plugin:jest-dom/recommended"
     ],
+    "plugins": [
+        "react",
+        "jsx-a11y",
+        "import",
+        "prettier"
+    ],
+    "rules": {
+        "import/order": [
+            "error",
+            {
+                "groups": [
+                    "external",
+                    "index",
+                    "sibling",
+                    "parent",
+                    "internal",
+                    "builtin"
+                ]
+            }
+        ]
+    }
 }
